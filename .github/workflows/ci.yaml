@@ -30,7 +30,7 @@ jobs:
         run: |
           test -f dockerfile
           echo "Dockerfile exists"
-      - name: Validate Dockerfile
+
+      - name: Build Docker image
         run: |
-          test -f dockerfile
-          echo "Dockerfile exists"
+          docker build -t project-02:ci .
